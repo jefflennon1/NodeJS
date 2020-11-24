@@ -1,1 +1,1 @@
-# Básico do node js para armazenar alguna scódigos simples.
+# Básico do node js para armazenar alguns códigos simples.
