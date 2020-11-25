@@ -11,17 +11,7 @@ mongoose.connect('mongodb://localhost:27017/nodeapi',
 
  requireDir('./src/models');
 
-const Product = mongoose.model('Product');
-
-app.get('/lista', (request, response)=>{
-  Product.create({
-    title: 'React native',
-    description: 'Curso de react native para iniciantes',
-    url: 'www.rocketseat.com.br',
-  });
-
-  return response.json(`qualquer coisa`);
-});
+app.use('/api', require('./src/routes'));
 
 app.listen(3386,()=>{
   console.log('Back-end Started! 🚀');
