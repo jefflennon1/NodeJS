@@ -3,10 +3,10 @@ const Product = mongoose.model('Product');
 
 
 module.exports = {
-  async index(request, response){
+  async index(req, res){
     const products = await Product.find();
 
-    return response.json(products);
+    return res.json(products);
   }
   
 }
