@@ -8,6 +8,7 @@ const EstadosController = require('./controllers/EstadoController');
 
 
 routes.get('/products', ProductController.index);
+routes.post('/products', ProductController.store)
 
 routes.get('/pessoas', PessoaController.indexPessoas);
 
