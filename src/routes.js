@@ -5,6 +5,7 @@ const PessoaController = require('./controllers/PessoaController');
 const NotasFiscalController = require('./controllers/NotaFiscalController');
 const CidadesController = require('./controllers/CidadeController');
 const EstadosController = require('./controllers/EstadoController');
+const CanalController = require('./controllers/CanalController');
 
 
 routes.get('/products', ProductController.index);
@@ -19,7 +20,10 @@ routes.get('/notasFiscais',NotasFiscalController.index);
 
 routes.get('/cidades', CidadesController.index);
 
-routes.get('/estados',EstadosController.index)
+routes.get('/estados',EstadosController.index);
+
+routes.get('/canais',CanalController.index);
+routes.post('/canais', CanalController.create);
 
 
 module.exports = routes;
