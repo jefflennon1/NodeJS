@@ -24,6 +24,8 @@ routes.get('/estados',EstadosController.index);
 
 routes.get('/canais',CanalController.index);
 routes.post('/canais', CanalController.create);
+routes.put('/canais/:id', CanalController.update);
+routes.delete('/canais/:id', CanalController.remove);
 
 
 module.exports = routes;
