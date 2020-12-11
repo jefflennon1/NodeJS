@@ -6,6 +6,7 @@ const NotasFiscalController = require('./controllers/NotaFiscalController');
 const CidadesController = require('./controllers/CidadeController');
 const EstadosController = require('./controllers/EstadoController');
 const CanalController = require('./controllers/CanalController');
+const SitesController = require('./controllers/SitesController');
 
 
 routes.get('/products', ProductController.index);
@@ -27,5 +28,7 @@ routes.post('/canais', CanalController.create);
 routes.put('/canais/:id', CanalController.update);
 routes.delete('/canais/:id', CanalController.remove);
 
+routes.get('/sites', SitesController.index);
+routes.post('/sites', SitesController.create);
 
 module.exports = routes;
