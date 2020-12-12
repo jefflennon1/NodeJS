@@ -3,8 +3,8 @@ const Sites = mongoose.model('Site');
 
 module.exports = {
     async index(req, res){
-      const site = await Sites.find();
-
+      const { page = 1 } = req.query;
+      const site = await Sites.paginate({}, {page, limit: 5});
       return res.json(site);
     },
     async create(req, res){
@@ -15,5 +15,10 @@ module.exports = {
       const { id }  = req.params;
       const site = await Sites.findByIdAndUpdate(id, req.body, { new: true });
       res.json(site);
+    },
+    async destroy(req, res){
+      await Sites.findByIdAndDelete(req.params.id);
+      res.json('Site deletado com sucesso!') 
     }
-};
+}
+  

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate');
 
 const SiteSchema = new mongoose.Schema({
   name:{
@@ -19,5 +20,5 @@ const SiteSchema = new mongoose.Schema({
   }
 });
 
-
+SiteSchema.plugin(mongoosePaginate);
 mongoose.model('Site', SiteSchema);
