@@ -30,5 +30,6 @@ routes.delete('/canais/:id', CanalController.remove);
 
 routes.get('/sites', SitesController.index);
 routes.post('/sites', SitesController.create);
+routes.put('/sites/:id', SitesController.update);
 
 module.exports = routes;
